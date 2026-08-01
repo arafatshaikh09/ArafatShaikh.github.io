@@ -86,8 +86,9 @@ body{
 
 .hero h1{
 
-    font-size:50px;
+    font-size:clamp(35px,4vw,60px);
     margin:15px 0;
+    white-space:nowrap;
 
 }
 
@@ -113,10 +114,35 @@ body{
 
 }
 
-.buttons{
+.hero-tags{
 
     display:flex;
-    gap:25px;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:15px;
+
+}
+
+
+.hero-tags span{
+
+    background:#e8efff;
+    color:#1f4fff;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+    font-weight:500;
+
+}
+
+.buttons{
+
+display:flex;
+gap:25px;
+margin-top:25px;
 
 }
 
@@ -155,7 +181,7 @@ body{
 
 .socials{
 
-    margin-top:40px;
+margin-top:25px;
 
 }
 
