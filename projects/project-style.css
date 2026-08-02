@@ -1,0 +1,207 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0b0f19;
+    color:white;
+    line-height:1.7;
+
+}
+
+
+
+header{
+
+    padding:25px 8%;
+
+}
+
+
+nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.logo{
+
+    color:white;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+
+}
+
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:30px;
+
+}
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+
+
+
+
+.project-hero{
+
+    padding:100px 10%;
+    text-align:center;
+
+}
+
+
+.project-hero h1{
+
+    font-size:50px;
+    margin-bottom:20px;
+
+}
+
+
+
+.project-hero p{
+
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    color:#c7c7c7;
+
+}
+
+
+
+.project-tags{
+
+    margin-top:30px;
+
+}
+
+
+.project-tags span{
+
+    display:inline-block;
+    padding:8px 18px;
+    margin:5px;
+    border-radius:20px;
+    background:#1d2638;
+
+}
+
+
+
+
+
+
+.project-info{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:40px 10%;
+    flex-wrap:wrap;
+
+}
+
+
+.info-card{
+
+    background:#151c2c;
+    padding:25px;
+    width:250px;
+    border-radius:15px;
+
+}
+
+
+
+
+
+.content-section{
+
+    padding:50px 12%;
+    max-width:1100px;
+    margin:auto;
+
+}
+
+
+.content-section h2{
+
+    font-size:32px;
+    margin-bottom:20px;
+
+}
+
+
+
+.content-section h3{
+
+    margin-top:25px;
+
+}
+
+
+
+.content-section li{
+
+    margin-left:20px;
+
+}
+
+
+
+
+
+.image-placeholder{
+
+    margin-top:30px;
+    height:300px;
+    background:#151c2c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:15px;
+    color:#aaa;
+
+}
+
+
+
+
+.skills-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+
+}
+
+
+
+footer{
+
+    text-align:center;
+    padding:40px;
+    color:#aaa;
+
+}
