@@ -763,9 +763,158 @@ grid-template-columns:1fr;
 }
 
 .cad-info p{
+/*==========================
+        Beyond Section
+===========================*/
 
-    color:#94a3b8;
+.beyond{
 
-    font-size:15px;
+    width:100%;
+    padding:140px 9%;
+    background:#060b14;
+
+}
+
+
+.beyond-header{
+
+    max-width:900px;
+    margin:0 auto 120px;
+    text-align:center;
+
+}
+
+.beyond-header h2{
+
+    font-size:4rem;
+    margin-bottom:30px;
+    font-weight:700;
+
+}
+
+.beyond-header p{
+
+    font-size:1.2rem;
+    color:#9da7b3;
+    line-height:1.9;
+
+}
+
+
+
+/* Card */
+
+.life-card{
+
+    display:flex;
+    align-items:center;
+    gap:90px;
+
+    margin-bottom:160px;
+
+}
+
+
+.life-card.reverse{
+
+    flex-direction:row-reverse;
+
+}
+
+
+.life-image{
+
+    flex:1;
+
+}
+
+.life-image img{
+
+    width:100%;
+    border-radius:28px;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+
+.life-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+.life-text{
+
+    flex:1;
+
+}
+
+
+.life-text span{
+
+    color:#4fc3f7;
+    font-size:1rem;
+    letter-spacing:3px;
+
+}
+
+
+.life-text h3{
+
+    font-size:3rem;
+    margin:15px 0 25px;
+
+}
+
+
+.life-text p{
+
+    color:#a8b0bb;
+    line-height:2;
+    font-size:1.05rem;
+    max-width:500px;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.life-card,
+.life-card.reverse{
+
+    flex-direction:column;
+
+}
+
+.life-text{
+
+    text-align:center;
+
+}
+
+.life-text p{
+
+    max-width:100%;
+
+}
+
+.beyond-header h2{
+
+    font-size:3rem;
+
+}
+
+.life-text h3{
+
+    font-size:2.3rem;
+
+}
 
 }
