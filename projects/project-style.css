@@ -186,7 +186,17 @@ nav a{
 }
 
 
+.project-image img{
 
+    width:100%;
+    max-width:900px;
+    max-height:450px;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+}
 
 .skills-grid{
 
