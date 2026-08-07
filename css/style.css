@@ -772,158 +772,548 @@ grid-template-columns:1fr;
 
 }
 
-/*==========================
-        Beyond Section
-===========================*/
+
+/* ================================
+        BEYOND ENGINEERING
+================================ */
 
 .beyond{
 
-    width:100%;
-    padding:140px 9%;
+    padding:160px 8%;
+
     background:#060b14;
+
+    color:white;
 
 }
 
 
+/* HEADER */
+
 .beyond-header{
 
-    max-width:900px;
-    margin:0 auto 120px;
+    max-width:850px;
+
+    margin:0 auto 100px;
+
     text-align:center;
 
 }
 
-.beyond-header h2{
 
-    font-size:4rem;
-    margin-bottom:30px;
-    font-weight:700;
+.beyond-label{
+
+    display:inline-block;
+
+    margin-bottom:25px;
+
+    color:#4fc3f7;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
 
 }
 
+
+.beyond-header h2{
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    margin-bottom:35px;
+
+}
+
+
+.beyond-header h2 span{
+
+    color:#6b7280;
+
+}
+
+
 .beyond-header p{
 
-    font-size:1.2rem;
+    max-width:650px;
+
+    margin:auto;
+
     color:#9da7b3;
+
+    font-size:1.1rem;
+
     line-height:1.9;
 
 }
 
 
+/* ================================
+        CARD GRID
+================================ */
 
-/* Card */
+.beyond-grid{
 
-.life-card{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+/* CARD */
+
+.beyond-card{
+
+    min-height:300px;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:#101722;
+
+    border:1px solid rgba(255,255,255,.06);
 
     display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    overflow:hidden;
+    position:relative;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        background .4s ease;
+
+}
+
+
+/* subtle glow */
+
+.beyond-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(79,195,247,.08);
+
+    filter:blur(60px);
+
+    top:-100px;
+
+    right:-100px;
+
+    transition:.5s;
+
+}
+
+
+.beyond-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(79,195,247,.25);
+
+    background:#131d2a;
+
+}
+
+
+.beyond-card:hover::before{
+
+    transform:scale(1.5);
+
+}
+
+
+/* CARD TOP */
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
     align-items:center;
-    gap:90px;
 
-    margin-bottom:160px;
+    position:relative;
 
-}
-
-
-.life-card.reverse{
-
-    flex-direction:row-reverse;
+    z-index:2;
 
 }
 
 
-.life-image{
+.card-top span{
 
-    flex:1;
+    color:#6b7280;
 
-}
+    font-size:13px;
 
-.life-image img{
-
-    width:100%;
-    border-radius:28px;
-
-    display:block;
-
-    transition:.45s;
+    letter-spacing:2px;
 
 }
 
 
-.life-image img:hover{
+.card-top i{
 
-    transform:scale(1.03);
-
-}
-
-
-.life-text{
-
-    flex:1;
-
-}
-
-
-.life-text span{
-
+    font-size:32px;
     color:#4fc3f7;
-    font-size:1rem;
-    letter-spacing:3px;
 
 }
 
 
-.life-text h3{
+.card-content h3{
 
-    font-size:3rem;
-    margin:15px 0 25px;
+    font-size:2.2rem;
 
-}
+    margin-bottom:12px;
 
-
-.life-text p{
-
-    color:#a8b0bb;
-    line-height:2;
-    font-size:1.05rem;
-    max-width:500px;
+    letter-spacing:-1px;
 
 }
 
 
+.card-content p{
 
-/* Responsive */
+    max-width:400px;
+
+    color:#9da7b3;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+
+/* ================================
+        DIFFERENT CARD ACCENTS
+================================ */
+
+.hiking .card-top i{
+
+    color:#7dd3fc;
+
+}
+
+
+.running .card-top i{
+
+    color:#60a5fa;
+
+}
+
+
+.cycling .card-top i{
+
+    color:#38bdf8;
+
+}
+
+
+.boxing .card-top i{
+
+    color:#818cf8;
+
+}
+
+
+.photography .card-top i{
+
+    color:#a78bfa;
+
+}
+
+
+/* ================================
+        PHOTOGRAPHY WIDE CARD
+================================ */
+
+.photography{
+
+    grid-column:span 2;
+
+    min-height:260px;
+
+}
+
+/* ================================
+        MOBILE
+================================ */
 
 @media(max-width:900px){
 
-.life-card,
-.life-card.reverse{
+    .beyond{
 
-    flex-direction:column;
+        padding:110px 6%;
+
+    }
+
+
+    .beyond-header{
+
+        margin-bottom:60px;
+
+    }
+
+
+    .beyond-header h2{
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .beyond-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .photography{
+
+        grid-column:span 1;
+
+    }
+
+
+    .beyond-card{
+
+        min-height:350px;
+
+    }
 
 }
 
-.life-text{
+/* ================================
+        CONTACT
+================================ */
+
+.contact{
+
+    padding:170px 8% 160px;
+
+    background:#060b14;
+
+    color:white;
 
     text-align:center;
 
 }
 
-.life-text p{
 
-    max-width:100%;
+.contact-content{
 
-}
+    max-width:900px;
 
-.beyond-header h2{
-
-    font-size:3rem;
+    margin:auto;
 
 }
 
-.life-text h3{
 
-    font-size:2.3rem;
+.contact-label{
+
+    display:inline-block;
+
+    margin-bottom:28px;
+
+    color:#4fc3f7;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
 
 }
+
+
+.contact h2{
+
+    font-size:clamp(3.5rem,7vw,6rem);
+
+    line-height:1;
+
+    letter-spacing:-4px;
+
+    margin-bottom:35px;
+
+}
+
+
+.contact h2 span{
+
+    color:#6b7280;
+
+}
+
+
+.contact p{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    color:#9da7b3;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+
+.contact-details{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:50px;
+
+}
+
+
+.contact-details a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:13px 22px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:30px;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    font-size:.9rem;
+
+    transition:.3s;
+
+}
+
+
+.contact-details a:hover{
+
+    color:white;
+
+    border-color:#4fc3f7;
+
+    transform:translateY(-3px);
+
+}
+
+
+.contact-details i{
+
+    color:#4fc3f7;
+
+}
+
+/* ================================
+        FOOTER
+================================ */
+
+.footer{
+
+    padding:30px 8%;
+
+    background:#04070d;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+
+.footer-content{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.footer p{
+
+    color:#64748b;
+
+    font-size:.8rem;
+
+}
+
+
+/* ================================
+        MOBILE
+================================ */
+
+@media(max-width:700px){
+
+    .contact{
+
+        padding:120px 6% 110px;
+
+    }
+
+
+    .contact h2{
+
+        font-size:3.5rem;
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .contact p{
+
+        font-size:1rem;
+
+    }
+
+
+    .footer-content{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        text-align:center;
+
+    }
 
 }
