@@ -763,6 +763,15 @@ grid-template-columns:1fr;
 }
 
 .cad-info p{
+
+    color:white;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
 /*==========================
         Beyond Section
 ===========================*/
